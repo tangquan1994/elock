@@ -154,14 +154,15 @@ void PWR_WakeUpPinCmd(FunctionalState NewState)
   *(vu32 *) CSR_EWUP_BB = (u32)NewState;
 }
 
-void __WFI()
-{
-	__asm ("wfi");
-}
-void __WFE()
-{
-	__asm ("wfe");
-}
+//void __WFI()
+//{
+//	__asm ("wfi");
+//}
+
+//void __WFE()
+//{
+//	__asm ("wfe");
+//}
 
 /*******************************************************************************
 * Function Name  : PWR_EnterSTOPMode

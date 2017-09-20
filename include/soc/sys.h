@@ -4,8 +4,8 @@
 	#include "stm32f10x_conf.h"
 	#include "stm32f10x_map.h"
 	#include "stm32f10x_nvic.h"
-	#include "USART.h"
-	#include "GPIO.h"
+	#include "usart.h"
+	#include "gpio.h"
 	#include "delay.h"
 	#include "stdio.h"
 

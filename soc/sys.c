@@ -1,4 +1,4 @@
-#include  "SYS.h"
+#include  "sys.h"
 #include "stm32f10x_rcc.h"
 
 #if 1
@@ -130,21 +130,21 @@ void MCU_INIT(u8 PLL)
 	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);		//2 bits for pre-emption priority,2 bits for subpriority
 }
 
-void NVIC_SetVectorTable(u32 NVIC_VectTab, u32 Offset)
-{
-	//用于标识向量表是在CODE区还是在RAM区
-	SCB->VTOR = NVIC_VectTab|(Offset & (u32)0x1FFFFF80);//设置NVIC的向量表偏移寄存器
-}
+//void NVIC_SetVectorTable(u32 NVIC_VectTab, u32 Offset)
+//{
+//	//用于标识向量表是在CODE区还是在RAM区
+//	SCB->VTOR = NVIC_VectTab|(Offset & (u32)0x1FFFFF80);//设置NVIC的向量表偏移寄存器
+//}
 
 //NVIC_SubPriority和NVIC_PreemptionPriority的原则是,数值越小,越优先	   
-void NVIC_PriorityGroupConfig(u32 NVIC_PriorityGroup)
-{
-	if(IS_NVIC_PRIORITY_GROUP(NVIC_PriorityGroup))
-	{
-		SCB->AIRCR &= ~((u32)7<<8);						//bit[10:8]先清零
-		SCB->AIRCR |= NVIC_PriorityGroup;			//将分组赋给bit[10:8]
-	}
-}
+//void NVIC_PriorityGroupConfig(u32 NVIC_PriorityGroup)
+//{
+//	if(IS_NVIC_PRIORITY_GROUP(NVIC_PriorityGroup))
+//	{
+//		SCB->AIRCR &= ~((u32)7<<8);						//bit[10:8]先清零
+//		SCB->AIRCR |= NVIC_PriorityGroup;			//将分组赋给bit[10:8]
+//	}
+//}
 
 void iNVIC_Init(u8 NVIC_IRQChannel,u8 NVIC_IRQChannelPreemptionPriority,u8 NVIC_IRQChannelSubPriority,u8 NVIC_IRQChannelCmd)
 {
