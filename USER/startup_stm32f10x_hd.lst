@@ -629,10 +629,11 @@ ARM Macro Assembler    Page 10
               00000000 
               00000800 
               00000000 
-Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=..\OBJ\s
-tartup_stm32f10x_hd.d -o..\OBJ\startup_stm32f10x_hd.o -ID:\RVMDK4.7\ARM\RV31\IN
-C -ID:\RVMDK4.7\ARM\CMSIS\Include -ID:\RVMDK4.7\ARM\Inc\ST\STM32F10x --predefin
-e="__EVAL SETA 1" --list=startup_stm32f10x_hd.lst startup_stm32f10x_hd.s
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=..\obj\startup_stm32f10x_hd.d -o..\obj\startup_stm32f10x_hd.o -IC:
+\Keil_v5\ARM\RV31\INC -IC:\Keil_v5\ARM\CMSIS\Include -IC:\Keil_v5\ARM\Inc\ST\ST
+M32F10x --predefine="__UVISION_VERSION SETA 520" --list=.\startup_stm32f10x_hd.
+lst startup_stm32f10x_hd.s
 
 
 
