@@ -373,7 +373,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\include\driver;..\include\soc;..\include\lib;..\fwlib\inc;..\tqoa;..\lib;..\include</IncludePath>
+              <IncludePath>..\include\driver;..\include\soc;..\include\lib;..\include\app;..\fwlib\inc;..\tqoa;..\lib;..\include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -420,6 +420,11 @@
               <FileName>startup_stm32f10x_hd.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\startup_stm32f10x_hd.s</FilePath>
+            </File>
+            <File>
+              <FileName>cortexm3_macro.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\cortexm3_macro.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -605,6 +610,11 @@
               <FileName>stm32f10x_wwdg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\fwlib\src\stm32f10x_wwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_nvic.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\fwlib\src\stm32f10x_nvic.c</FilePath>
             </File>
           </Files>
         </Group>
